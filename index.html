@@ -1,12 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Cookie&display=swap" rel="stylesheet">
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Edupler</title>
   </head>
-  <body class="bg-black text-white">
+  <body class="bg-blue-950 text-white max-w-3xl m-auto px-4">
     <header>
       <div class="flex items-center w-max m-auto gap-4">
         <img
@@ -17,12 +22,15 @@
         <h1 class="text-4xl font-bold">Edupler</h1>
       </div>
       <nav id="navSup" class="flex justify-between px-5 mt-4 border-y-2">
-        <a id="inicio" class="w-full text-center rounded-md" href="#">Inicio</a>
-        <a id="niveles" class="w-full text-center rounded-md" href="#">Niveles</a>
-        <a id="cursos" class="w-full text-center rounded-md" href="#">Cursos</a>
-        <a id="examenes" class="w-full text-center rounded-md" href="#">Examenes</a>
+        <a id="inicio" class="w-full text-center rounded-md" href="assets/pages/inicio.html">Inicio</a>
+        <a id="cursos" class="w-full text-center rounded-md" href="assets/pages/cursos.html">Cursos</a>
+        <a id="examenes" class="w-full text-center rounded-md" href="assets/pages/examenes.html">Examenes</a>
+        <a id="contacto" class="w-full text-center rounded-md" href="assets/pages/niveles.html">Contacto</a>
       </nav>
     </header>
+    <main id="contenido" class="mt-10">
+      
+    </main>
     <script src="assets/js/index.js"></script>
   </body>
 </html>
