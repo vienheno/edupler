@@ -2,35 +2,44 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="assets/css/style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
 
+    <script src="assets/js/index.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --font-cascadia: "Cascadia Code", monospace;
+        --color-blue-fondo: #213883;
+      }
+    </style>
     <title>Edupler</title>
   </head>
-  <body class="bg-blue-950 text-white max-w-3xl m-auto px-4">
+  <body class="bg-blue-fondo text-white max-w-7xl m-auto px-4 font-cascadia">
     <header>
       <div class="flex items-center w-max m-auto gap-4">
         <img
           src="assets/img/Logo-Edupler.png"
           alt="Logo Edupler"
-          class="w-20"
+          class="w-40"
         />
-        <h1 class="text-4xl font-bold">Edupler</h1>
+        <h1 class="text-8xl font-bold mb-4">Edupler</h1>
       </div>
-      <nav id="navSup" class="flex justify-between px-5 mt-4 border-y-2">
-        <a id="inicio" class="w-full text-center rounded-md" href="assets/pages/inicio.html">Inicio</a>
-        <a id="cursos" class="w-full text-center rounded-md" href="assets/pages/cursos.html">Cursos</a>
-        <a id="examenes" class="w-full text-center rounded-md" href="assets/pages/examenes.html">Examenes</a>
-        <a id="contacto" class="w-full text-center rounded-md" href="assets/pages/niveles.html">Contacto</a>
+      <nav id="navSup" class="flex justify-between h-12 px-5 mt-6 border-y-2 text-xl font-semibold">
+        <a id="inicio" class="w-full rounded-md flex items-center justify-center" href="assets/pages/inicio.html">Inicio</a>
+        <a id="cursos" class="w-full rounded-md flex items-center justify-center" href="assets/pages/cursos.html">Cursos</a>
+        <a id="examenes" class="w-full rounded-md flex items-center justify-center" href="assets/pages/examenes.html">Examenes</a>
+        <a id="contacto" class="w-full rounded-md flex items-center justify-center" href="assets/pages/niveles.html">Contacto</a>
       </nav>
     </header>
-    <main id="contenido" class="mt-10">
+    <main id="page_main" class="mt-10">
       
     </main>
-    <script src="assets/js/index.js"></script>
+    
   </body>
 </html>
