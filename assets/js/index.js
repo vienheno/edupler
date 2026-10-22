@@ -34,8 +34,8 @@ async function cargarHTML(url, destino) {
 //Llamamos a la funcion para que cargue inicio.html automaticamente
 //al cargar la pagina principal (ingex.html)
 async function iniciar() {
-  await cargarHTML("assets/pages/expresiones_algebraicas.html", "#page_main");
-  await cargarHTML("assets/pages/expresiones_algebraicas/leyes_exponentes.html", "#exp_alg");
+  //await cargarHTML("assets/pages/inicio.html", "#page_main");
+  await cargarHTML("assets/pages/expresiones_algebraicas/leyes_exponentes.html", "#page_main");
   insertarFormulas(); // ← una sola línea, rellena todo
 }
 
@@ -63,20 +63,22 @@ navSup.addEventListener("click", async (e) => {
 main.addEventListener("click", async (e) =>{
   const enlace = e.target.closest("a");
 
+  if (!enlace) return;
+  e.preventDefault();
+
   //Paginas que se cargaran por defecto al abrir un enlace
   if (enlace.id === "expresiones_algebraicas") {
     await cargarHTML(`assets/pages/expresiones_algebraicas/leyes_exponentes.html`, "#exp_alg");
     insertarFormulas();
   }
   
-  if (!enlace) return;
-  e.preventDefault();
-
   // ¿El enlace está dentro de #nav_exp_alg?
   if (enlace.closest("#nav_exp_alg")) {
-    cargarHTML(`assets/pages/expresiones_algebraicas/${enlace.id}.html`, "#exp_alg");
+    await cargarHTML(`assets/pages/expresiones_algebraicas/${enlace.id}.html`, "#exp_alg");
+    insertarFormulas();
   } else {
-    cargarHTML(`assets/pages/${enlace.id}.html`, "#page_main");
+    await cargarHTML(`assets/pages/${enlace.id}.html`, "#page_main");
+    //insertarFormulas();
   }
   //cargarHTML(`assets/pages/${enlace.id}.html`, "#page_main");
 });
